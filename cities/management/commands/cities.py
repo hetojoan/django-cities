@@ -1006,7 +1006,7 @@ class Command(BaseCommand):
                             region__country=pc.country)
                 except Subregion.DoesNotExist:
                     pc.subregion = None
-                                except Subregion.MultipleObjectsReturned:
+                except Subregion.MultipleObjectsReturned:
                     self.logger.warn("Found multiple subregions for '{}' in '{}' - ignoring".format(
                         pc.region_name,
                         pc.subregion_name))
